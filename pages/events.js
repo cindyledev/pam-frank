@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const events = [
   {
@@ -17,7 +18,6 @@ export default function Example() {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
-
       <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
         <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
           <div className="flex justify-center items-center">
@@ -38,6 +38,7 @@ export default function Example() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

@@ -1,10 +1,11 @@
 import Head from 'next/head';
 
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 min-h-screen">
       <Head>
         <title>Pam & Frank</title>
         <meta name="description" content="Pam and Frank's Wedding" />
@@ -21,8 +22,19 @@ export default function Home() {
               Pam & Frank
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-600">
-              Our patented padded snack sleeve construction protects your favorite treats from getting smooshed during
-              all-day adventures, long shifts at work, and tough travel schedules.
+              Please join us for our wedding celebration on
+            </p>
+            <p className="mt-3 max-w-3xl text-lg text-gray-600">
+              Aug 10, 2022
+            </p>
+          </div>
+
+          <div className="flex flex-col py-24 items-center text-center">
+            <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Our Story
+            </h2>
+            <p className="mt-3 max-w-3xl text-lg text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
 
@@ -56,6 +68,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   )
 }

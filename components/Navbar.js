@@ -1,4 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
+import Link from 'next/link'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
@@ -17,27 +17,27 @@ export default function Navbar() {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a href="#" className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                      HOME
-                    </a>
-                    <a
-                      href="/events"
-                      className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      EVENTS
-                    </a>
+                    <Link href="/">
+                      <a className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        HOME
+                      </a>
+                    </Link>
+                    <Link href="/events">
+                      <a className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        EVENTS
+                      </a>
+                    </Link>
                     <a
                       href="#"
                       className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       WEDDING PARTY
                     </a>
-                    <a
-                      href="#"
-                      className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      TRAVEL
-                    </a>
+                    <Link href="/travel">
+                      <a className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        TRAVEL
+                      </a>
+                    </Link>
                     <a
                       href="#"
                       className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -49,7 +49,7 @@ export default function Navbar() {
               </div>
               <div className="-mr-2 flex sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-red-400 hover:text-white hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -66,14 +66,14 @@ export default function Navbar() {
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
               <Disclosure.Button
                 as="a"
-                href="#"
+                href="/"
                 className="text-white hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 HOME
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="#"
+                href="/events"
                 className="text-white hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 EVENTS
@@ -87,7 +87,7 @@ export default function Navbar() {
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="#"
+                href="/travel"
                 className="text-white hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 TRAVEL

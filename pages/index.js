@@ -1,8 +1,5 @@
 import Head from 'next/head';
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-
 export default function Home() {
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -11,8 +8,6 @@ export default function Home() {
         <meta name="description" content="Pam and Frank's Wedding" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Navbar />
 
       <div className="max-w-2xl mx-auto px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         {/* Details section */}
@@ -25,7 +20,7 @@ export default function Home() {
               Please join us for our wedding celebration on
             </p>
             <p className="mt-3 max-w-3xl text-lg text-gray-600">
-              Aug 10, 2022
+              September 10, 2022
             </p>
           </div>
 
@@ -68,7 +63,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <Footer />
     </div>
   )
 }

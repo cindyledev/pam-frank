@@ -27,12 +27,6 @@ export default function Navbar() {
                         EVENTS
                       </a>
                     </Link>
-                    <a
-                      href="#"
-                      className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      WEDDING PARTY
-                    </a>
                     <Link href="/travel">
                       <a className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         TRAVEL
@@ -77,13 +71,6 @@ export default function Navbar() {
                 className="text-white hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 EVENTS
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="/events"
-                className="text-white hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                WEDDING PARTY
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"

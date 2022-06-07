@@ -1,23 +1,6 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-
-const events = [
-  {
-    name: 'WEDDING CEREMONY',
-    time: "5:00 PM - 6:00 PM, August 1, 2022",
-    location: "Golden Gate Park Rose Garden",
-  },
-  {
-    name: 'RECEPTION',
-    time: "7:00 PM - 11:00 PM, August 1, 2022",
-    location: "Terra Gallery"
-  },
-]
-
-export default function Example() {
+export default function Events() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Navbar />
       <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
         <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
           <div className="flex justify-center items-center">
@@ -25,20 +8,21 @@ export default function Example() {
               EVENTS
             </h2>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 lg:grid-cols-2">
-            {events.map((event) => (
-              <div key={event.name} className="flex justify-center">
-                <div>
-                  <h3 className="flex justify-center text-sm font-medium text-gray-900">{event.name}</h3>
-                  <p className="flex justify-center mt-2 text-sm text-gray-500">{event.time}</p>
-                  <p className="flex justify-center mt-2 text-sm text-gray-500">{event.location}</p>
-                </div>
+          <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8">
+            <div className="flex justify-center">
+              <div>
+                <h3 className="flex justify-center text-sm font-medium text-gray-900">WEDDING CEREMONY</h3>
+                <p className="flex justify-center mt-2 text-sm text-gray-500">4:30 PM - September 10, 2022</p>
+                <p className="flex justify-center mt-2 text-sm text-gray-500">The Venetian Banquet & Hospitality Center</p>
+                <p className="flex justify-center mt-2 text-sm text-gray-500">219 Romina Drive</p>
+                <p className="flex justify-center mt-2 text-sm text-gray-500">Vaughan, L4K 4V3</p>
+                <p className="flex justify-center mt-2 text-sm text-gray-500">905-660-1110</p>
+                <p className="flex justify-center mt-2 text-sm text-gray-500">ROOM D</p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

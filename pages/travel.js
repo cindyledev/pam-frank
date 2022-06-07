@@ -1,38 +1,94 @@
-const events = [
+const hotels = [
   {
-    name: 'HOTEL NIKKO',
-    address: "222 Mason St.",
-    city: "Toronto, ON, A1B 2C3"
+    name: 'NOVOTEL TORONTO VAUGHAN',
+    address: "200 Bass Pro Mills Drive",
+    city: "Vaughan, ON, L4K 0B9",
+    url: "https://all.accor.com/hotel/7157/index.en.shtml",
+    imageSrc: 'https://www.ahstatic.com/photos/7157_ho_00_p_1024x768.jpg',
+    imageAlt: 'Exterior of Novotel Toronto Vaughan',
   },
   {
-    name: 'HOTEL NIKKA',
-    address: "333 Mason St.",
-    city: "Toronto, ON, A1B 2C3"
+    name: 'ALOFT VAUGHAN MILLS',
+    address: "151 Bass Pro Mills Drive",
+    city: "Vaughan, ON, L4K 0E6",
+    url: "https://www.marriott.com/en-us/hotels/yyzal-aloft-vaughan-mills/overview",
+    imageSrc: 'https://cache.marriott.com/content/dam/marriott-renditions/YYZAL/yyzal-exterior-9949-hor-pano.jpg',
+    imageAlt: 'Exterior of Aloft Vaughan Mills',
+  },
+  {
+    name: 'SPRINGHILL SUITES BY MARRIOTT TORONTO VAUGHAN',
+    address: "612 Applewood Crescent",
+    city: "Vaughan, ON, L4K 4B4",
+    url: "https://www.marriott.com/en-us/hotels/yyzsv-springhill-suites-toronto-vaughan/overview",
+    imageSrc: 'https://cache.marriott.com/content/dam/marriott-renditions/YYZSV/yyzsv-lobby-3145-hor-pano.jpg',
+    imageAlt: 'Interior of Springhill Suites',
+  },
+  {
+    name: 'HOMEWOOD SUITES BY HILTON TORONTO VAUGHAN',
+    address: "618 Applewood Crescent",
+    city: "Vaughan, ON, L4K 4B4",
+    url: "https://www.hilton.com/en/hotels/yyzvghw-homewood-suites-toronto-vaughan",
+    imageSrc: 'https://www.hilton.com/im/en/YYZVGHW/5506377/yyzvghw-exteriorhw-l2.jpg?impolicy=crop&cw=4500&ch=1889&gravity=NorthWest&xposition=0&yposition=555&rw=1470&rh=617',
+    imageAlt: 'Exterior of Homewood Suites',
+  },
+  {
+    name: 'MONTE CARLO INN',
+    address: "705 Applewood Crescent",
+    city: "Vaughan, ON, L4K 5W8",
+    url: "https://www.montecarloinns.com/vaughan-suites",
+    imageSrc: 'https://image-tc.galaxy.tf/wijpeg-ee8qt91tti8lwws94szjytmgu/file.jpg',
+    imageAlt: 'Exterior of Monte Carolo Inn',
   },
 ]
 
-export default function Example() {
-  return (
-    <div className="bg-gray-50 min-h-screen">
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
-      <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
-        <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
-          <div className="flex justify-center items-center">
-            <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
-              TRAVEL
-            </h2>
-          </div>
-          <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 lg:grid-cols-2">
-            {events.map((event) => (
-              <div key={event.name} className="flex justify-center">
-                <div>
-                  <h3 className="flex justify-center text-sm font-medium text-gray-900">{event.name}</h3>
-                  <p className="flex justify-center mt-2 text-sm text-gray-500">{event.address}</p>
-                  <p className="flex justify-center mt-2 text-sm text-gray-500">{event.city}</p>
+export default function Travel() {
+  return (
+    <div className="bg-gray-50">
+      <div className="max-w-2xl mx-auto py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">HOTELS NEARBY</h2>
+        </div>
+
+        <div className="mt-16 space-y-16">
+          {hotels.map((hotel, hotelIdx) => (
+            <div
+              key={hotel.name}
+              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8 lg:items-center"
+            >
+              <div
+                className={classNames(
+                  hotelIdx % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-8 xl:col-start-9',
+                  'mt-6 lg:mt-0 lg:row-start-1 lg:col-span-5 xl:col-span-4'
+                )}
+              >
+                <h3 className="text-lg font-medium text-gray-900">{hotel.name}</h3>
+                <p className="mt-2 text-sm text-gray-500">{hotel.address}</p>
+                <p className="mt-2 text-sm text-gray-500">{hotel.city}</p>
+                <a href={hotel.url} target="_blank" rel="noreferrer">
+                  <button
+                    type="button"
+                    className="inline-flex items-center mt-2 px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-red-800 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
+                  >
+                    LINK
+                  </button>
+                </a>
+              </div>
+              <div
+                className={classNames(
+                  hotelIdx % 2 === 0 ? 'lg:col-start-6 xl:col-start-5' : 'lg:col-start-1',
+                  'flex-auto lg:row-start-1 lg:col-span-7 xl:col-span-8'
+                )}
+              >
+                <div className="aspect-w-5 aspect-h-2 rounded-lg bg-gray-100 overflow-hidden">
+                  <img src={hotel.imageSrc} alt={hotel.imageAlt} className="object-center object-cover" />
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

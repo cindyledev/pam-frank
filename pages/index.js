@@ -17,29 +17,12 @@ export default function Home() {
               id="details-heading"
               className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
             >
-              Pam & Frank
+              PAM & FRANK
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-600">
               Please join us for our wedding celebration on
             </p>
             <p className="mt-3 max-w-3xl text-lg text-gray-600">September 10, 2022</p>
-          </div>
-
-          <div className="flex flex-col py-24 items-center text-center">
-            <h2
-              id="details-heading"
-              className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-            >
-              Our Story
-            </h2>
-            <p className="mt-3 max-w-3xl text-lg text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
           </div>
 
           <div className="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
@@ -71,6 +54,24 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          <div className="flex flex-col py-24 items-center text-center">
+            <h2
+              id="details-heading"
+              className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              Our Story
+            </h2>
+            <p className="mt-3 max-w-3xl text-lg text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            </p>
+          </div>
+
         </section>
       </div>
     </div>

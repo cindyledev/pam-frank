@@ -33,7 +33,7 @@ export default function Navbar() {
                       </a>
                     </Link>
                     <a
-                      href="#"
+                      href="/gift-registry"
                       className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       GIFT REGISTRY
@@ -81,7 +81,7 @@ export default function Navbar() {
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="#"
+                href="/gift-registry"
                 className="text-white hover:bg-red-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 GIFT REGISTRY

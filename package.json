@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write \"./**/*.{md,jsx,json,html,css,js}\"",
+    "prettier-check": "prettier --check \"./**/*.{md,jsx,json,html,css,js}\""
   },
   "dependencies": {
     "@headlessui/react": "^1.6.4",
@@ -21,6 +23,7 @@
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "postcss": "^8.4.14",
+    "prettier": "2.6.2",
     "tailwindcss": "^3.0.24"
   }
 }

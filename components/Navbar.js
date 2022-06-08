@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import Link from 'next/link';
+import { Disclosure } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
@@ -91,5 +91,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }

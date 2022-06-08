@@ -12,7 +12,9 @@ export default function Event() {
                     WEDDING CEREMONY
                   </h1>
                   <p className="mt-4 text-xl text-gray-600">4:30 PM - September 10, 2022</p>
-                  <p className="mt-2 text-xl text-gray-600">The Venetian Banquet & Hospitality Center</p>
+                  <p className="mt-2 text-xl text-gray-600">
+                    The Venetian Banquet & Hospitality Center
+                  </p>
                   <p className="mt-2 text-lg text-gray-600">219 Romina Drive</p>
                   <p className="mt-2 text-lg text-gray-600">Vaughan, L4K 4V3</p>
                   <p className="mt-2 text-lg text-gray-600">905-660-1110</p>
@@ -31,5 +33,5 @@ export default function Event() {
         </div>
       </div>
     </div>
-  )
+  );
 }

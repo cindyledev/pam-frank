@@ -92,7 +92,6 @@ export default function Event() {
                       ))}
                     </ul>
                   </div>
-
                 </div>
               </div>
             </div>

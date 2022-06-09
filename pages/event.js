@@ -99,12 +99,12 @@ export default function Event() {
           </div>
           <div className="w-full h-48 sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full">
             <img
-              src="ImageID_51573693_1.jpg"
+              src="img/ImageID_51573693_1.jpg"
               alt=""
               className="hidden lg:block w-full h-full object-center object-cover"
             />
             <img
-              src="ImageID_51573693_1_crop.jpg"
+              src="img/ImageID_51573693_1_crop.jpg"
               alt=""
               className="block lg:hidden w-full h-full object-top object-cover"
             />

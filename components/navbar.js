@@ -32,12 +32,11 @@ export default function Navbar() {
                         TRAVEL
                       </a>
                     </Link>
-                    <a
-                      href="/gift-registry"
-                      className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      GIFT REGISTRY
-                    </a>
+                    <Link href="/gift-registry">
+                      <a className="text-white hover:bg-red-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        GIFT REGISTRY
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

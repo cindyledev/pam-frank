@@ -43,6 +43,14 @@ export default function Event() {
                       EVENTS
                     </h2>
                   </div>
+                  <p className="mt-4 text-xl text-gray-600">4:30 PM - September 10, 2022</p>
+                  <p className="mt-2 text-xl text-gray-600">
+                    The Venetian Banquet & Hospitality Center
+                  </p>
+                  <p className="mt-2 text-lg text-gray-600">219 Romina Drive</p>
+                  <p className="mt-2 text-lg text-gray-600">Vaughan, L4K 4V3</p>
+                  <p className="mt-2 text-lg text-gray-600">905-660-1110</p>
+                  <p className="mt-2 font-bold text-xl text-gray-600">ROOM D</p>
                   <div className="flow-root my-8">
                     <ul role="list" className="-mb-8">
                       {timeline.map((event, eventIdx) => (
@@ -84,14 +92,7 @@ export default function Event() {
                       ))}
                     </ul>
                   </div>
-                  <p className="mt-4 text-xl text-gray-600">4:30 PM - September 10, 2022</p>
-                  <p className="mt-2 text-xl text-gray-600">
-                    The Venetian Banquet & Hospitality Center
-                  </p>
-                  <p className="mt-2 text-lg text-gray-600">219 Romina Drive</p>
-                  <p className="mt-2 text-lg text-gray-600">Vaughan, L4K 4V3</p>
-                  <p className="mt-2 text-lg text-gray-600">905-660-1110</p>
-                  <p className="mt-2 font-bold text-xl text-gray-600">ROOM D</p>
+
                 </div>
               </div>
             </div>
@@ -100,7 +101,12 @@ export default function Event() {
             <img
               src="ImageID_51573693_1.jpg"
               alt=""
-              className="w-full h-full object-center object-cover"
+              className="hidden lg:block w-full h-full object-center object-cover"
+            />
+            <img
+              src="ImageID_51573693_1_crop.jpg"
+              alt=""
+              className="block lg:hidden w-full h-full object-top object-cover"
             />
           </div>
         </div>

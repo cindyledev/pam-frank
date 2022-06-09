@@ -71,7 +71,6 @@ export default function Home() {
               mollit anim id est laborum.
             </p>
           </div>
-
         </section>
       </div>
     </div>

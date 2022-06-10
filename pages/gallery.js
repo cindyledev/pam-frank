@@ -1,3 +1,5 @@
+import { mapImageResources, search } from '../lib/cloudinary';
+
 const files = [
   {
     title: '03992102',
@@ -29,7 +31,10 @@ const files = [
   },
 ];
 
-export default function Gallery({ images }) {
+export default function Gallery({ images, next_cursor }) {
+  console.log(images);
+  console.log(next_cursor);
+
   return (
     <div className="bg-gray-50">
       <div className="max-w-2xl mx-auto py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
@@ -62,30 +67,13 @@ export default function Gallery({ images }) {
 }
 
 export async function getStaticProps() {
-  const results = await fetch(
-    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
-    {
-      headers: {
-        Authorization: `Basic ${Buffer.from(
-          process.env.CLOUDINARY_API_KEY + ':' + process.env.CLOUDINARY_API_SECRET
-        ).toString('base64')}`,
-      },
-    }
-  ).then((res) => res.json());
+  const results = await search();
 
-  const { resources } = results;
+  const { resources, next_cursor } = results;
 
-  const images = resources.map((resource) => {
-    return {
-      id: resource.asset_id,
-      title: resource.public_id,
-      image: resource.secure_url,
-      width: resource.width,
-      height: resource.height,
-    };
-  });
+  const images = mapImageResources(resources);
 
   return {
-    props: { images },
+    props: { images, next_cursor },
   };
 }

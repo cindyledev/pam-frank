@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { mapImageResources, search } from '../lib/cloudinary';
 
 const files = [
@@ -9,31 +11,22 @@ const files = [
     title: '03992103',
     source: 'img/03992103.jpg',
   },
-  {
-    title: '03992106',
-    source: 'img/03992106.jpg',
-  },
-  {
-    title: '03992116',
-    source: 'img/03992116.jpg',
-  },
-  {
-    title: '03992117',
-    source: 'img/03992117.jpg',
-  },
-  {
-    title: '03992119',
-    source: 'img/03992119.jpg',
-  },
-  {
-    title: '03992122',
-    source: 'img/03992122.jpg',
-  },
 ];
 
 export default function Gallery({ images, next_cursor }) {
-  console.log(images);
-  console.log(next_cursor);
+  console.log('images', images);
+  console.log('next_cursor', next_cursor);
+  useEffect(() => {
+    (async function run() {
+      const results = await fetch('/api/search', {
+        method: 'POST',
+        body: JSON.stringify({
+          next_cursor,
+        }),
+      }).then((res) => res.json());
+      console.log('results', results);
+    });
+  }, []);
 
   return (
     <div className="bg-gray-50">

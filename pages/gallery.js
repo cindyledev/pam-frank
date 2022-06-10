@@ -1,42 +1,35 @@
 const files = [
   {
     title: '03992102',
-    source:
-      'img/03992102.jpg',
+    source: 'img/03992102.jpg',
   },
   {
     title: '03992103',
-    source:
-      'img/03992103.jpg',
+    source: 'img/03992103.jpg',
   },
   {
     title: '03992106',
-    source:
-      'img/03992106.jpg',
+    source: 'img/03992106.jpg',
   },
   {
     title: '03992116',
-    source:
-      'img/03992116.jpg',
+    source: 'img/03992116.jpg',
   },
   {
     title: '03992117',
-    source:
-      'img/03992117.jpg',
+    source: 'img/03992117.jpg',
   },
   {
     title: '03992119',
-    source:
-      'img/03992119.jpg',
+    source: 'img/03992119.jpg',
   },
   {
     title: '03992122',
-    source:
-      'img/03992122.jpg',
+    source: 'img/03992122.jpg',
   },
 ];
 
-export default function Gallery() {
+export default function Gallery({ images }) {
   return (
     <div className="bg-gray-50">
       <div className="max-w-2xl mx-auto py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
@@ -66,4 +59,33 @@ export default function Gallery() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const results = await fetch(
+    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
+    {
+      headers: {
+        Authorization: `Basic ${Buffer.from(
+          process.env.CLOUDINARY_API_KEY + ':' + process.env.CLOUDINARY_API_SECRET
+        ).toString('base64')}`,
+      },
+    }
+  ).then((res) => res.json());
+
+  const { resources } = results;
+
+  const images = resources.map((resource) => {
+    return {
+      id: resource.asset_id,
+      title: resource.public_id,
+      image: resource.secure_url,
+      width: resource.width,
+      height: resource.height,
+    };
+  });
+
+  return {
+    props: { images },
+  };
 }

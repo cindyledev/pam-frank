@@ -1,4 +1,4 @@
-import { CakeIcon, HeartIcon } from '@heroicons/react/solid';
+import { CakeIcon, HeartIcon, BellIcon } from '@heroicons/react/solid';
 
 const timeline = [
   {
@@ -8,13 +8,23 @@ const timeline = [
     href: '#',
     time: '4:30 PM',
     datetime: '2022-09-10',
-    icon: HeartIcon,
-    iconBackground: 'bg-red-400',
+    icon: BellIcon,
+    iconBackground: 'bg-yellow-400',
   },
   {
     id: 2,
     content: 'Start of',
-    target: 'Reception Dinner',
+    target: 'Reception',
+    href: '#',
+    time: '5:00 PM',
+    datetime: '2022-09-10',
+    icon: HeartIcon,
+    iconBackground: 'bg-red-400',
+  },
+  {
+    id: 3,
+    content: 'Start of',
+    target: 'Dinner',
     href: '#',
     time: '6:30 PM',
     datetime: '2022-09-10',

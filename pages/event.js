@@ -111,14 +111,28 @@ export default function Event() {
                                     </p>
                                   </div>
                                   <div className="mt-2 text-sm text-gray-700">
-                                    <p className="italic font-semibold">{activityItem.description.details}</p>
+                                    <p className="italic font-semibold">
+                                      {activityItem.description.details}
+                                    </p>
                                     <ul role="list" className="list-disc ml-4">
-                                      {activityItem.description.item1 ? <li>{activityItem.description.item1}</li> : null}
-                                      {activityItem.description.item2 ? <li>{activityItem.description.item2}</li> : null}
-                                      {activityItem.description.item3 ? <li>{activityItem.description.item3}</li> : null}
-                                      {activityItem.description.item4 ? <li>{activityItem.description.item4}</li> : null}
-                                      {activityItem.description.item5 ? <li>{activityItem.description.item5}</li> : null}
-                                      {activityItem.description.item6 ? <li>{activityItem.description.item6}</li> : null}
+                                      {activityItem.description.item1 ? (
+                                        <li>{activityItem.description.item1}</li>
+                                      ) : null}
+                                      {activityItem.description.item2 ? (
+                                        <li>{activityItem.description.item2}</li>
+                                      ) : null}
+                                      {activityItem.description.item3 ? (
+                                        <li>{activityItem.description.item3}</li>
+                                      ) : null}
+                                      {activityItem.description.item4 ? (
+                                        <li>{activityItem.description.item4}</li>
+                                      ) : null}
+                                      {activityItem.description.item5 ? (
+                                        <li>{activityItem.description.item5}</li>
+                                      ) : null}
+                                      {activityItem.description.item6 ? (
+                                        <li>{activityItem.description.item6}</li>
+                                      ) : null}
                                     </ul>
                                   </div>
                                 </div>

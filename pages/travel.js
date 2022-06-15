@@ -1,5 +1,6 @@
 const hotels = [
   {
+    id: 1,
     name: 'NOVOTEL TORONTO VAUGHAN',
     address: '200 Bass Pro Mills Drive',
     city: 'Vaughan, ON, L4K 0B9',
@@ -8,6 +9,7 @@ const hotels = [
     imageAlt: 'Exterior of Novotel Toronto Vaughan',
   },
   {
+    id: 2,
     name: 'ALOFT VAUGHAN MILLS',
     address: '151 Bass Pro Mills Drive',
     city: 'Vaughan, ON, L4K 0E6',
@@ -17,6 +19,7 @@ const hotels = [
     imageAlt: 'Exterior of Aloft Vaughan Mills',
   },
   {
+    id: 3,
     name: 'SPRINGHILL SUITES BY MARRIOTT TORONTO VAUGHAN',
     address: '612 Applewood Crescent',
     city: 'Vaughan, ON, L4K 4B4',
@@ -26,6 +29,7 @@ const hotels = [
     imageAlt: 'Interior of Springhill Suites',
   },
   {
+    id: 4,
     name: 'HOMEWOOD SUITES BY HILTON TORONTO VAUGHAN',
     address: '618 Applewood Crescent',
     city: 'Vaughan, ON, L4K 4B4',
@@ -35,6 +39,7 @@ const hotels = [
     imageAlt: 'Exterior of Homewood Suites',
   },
   {
+    id: 5,
     name: 'MONTE CARLO INN',
     address: '705 Applewood Crescent',
     city: 'Vaughan, ON, L4K 5W8',
@@ -61,7 +66,7 @@ export default function Travel() {
         <div className="mt-16 space-y-16">
           {hotels.map((hotel, hotelIdx) => (
             <div
-              key={hotel.name}
+              key={hotel.id}
               className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8 lg:items-center"
             >
               <div
@@ -73,6 +78,16 @@ export default function Travel() {
                 <h3 className="text-lg font-medium text-gray-900">{hotel.name}</h3>
                 <p className="mt-2 text-sm text-gray-500">{hotel.address}</p>
                 <p className="mt-2 text-sm text-gray-500">{hotel.city}</p>
+                {hotel.id === 1 ? (
+                  <p className="mt-2 text-sm text-gray-500">
+                    Call <span className="font-semibold">905-660-0212</span> or email{' '}
+                    <span className="font-semibold">novotel.torontovaughan@accor.com</span> before{' '}
+                    <span className="font-semibold">August 10th</span> and mention the{' '}
+                    <span className="font-semibold">Peters & Liehr Wedding</span> or{' '}
+                    <span className="font-semibold">Block ID 689123</span> for the group block and
+                    discounted rooms
+                  </p>
+                ) : null}
                 <a href={hotel.url} target="_blank" rel="noreferrer">
                   <button
                     type="button"

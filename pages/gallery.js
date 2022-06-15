@@ -36,22 +36,6 @@ export default function Gallery({ images, next_cursor }) {
             GALLERY
           </h2>
           <div className="mt-16 space-y-16">
-            {/* <ul
-              role="list"
-              className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
-            >
-              {files.map((file) => (
-                <li key={file.source} className="relative">
-                  <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-red-800 overflow-hidden">
-                    <img
-                      src={file.source}
-                      alt=""
-                      className="object-cover pointer-events-none group-hover:opacity-75"
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul> */}
           </div>
         </div>
       </div>

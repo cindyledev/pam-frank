@@ -1,35 +1,45 @@
-import { CakeIcon, HeartIcon, BellIcon } from '@heroicons/react/solid';
+import { Fragment } from 'react';
+import { CakeIcon, HeartIcon, BellIcon, UserCircleIcon } from '@heroicons/react/solid';
 
-const timeline = [
+const activity = [
   {
     id: 1,
-    content: 'Start of',
-    target: 'Wedding Ceremony',
-    href: '#',
+    person: { name: 'Wedding Ceremony', href: '#' },
+    description: {
+      details:
+        'Approximately 30 minutes, followed immediately by reception in the lobby at the same venue.',
+    },
     time: '4:30 PM',
-    datetime: '2022-09-10',
     icon: BellIcon,
     iconBackground: 'bg-yellow-400',
   },
   {
     id: 2,
-    content: 'Start of',
-    target: 'Reception',
-    href: '#',
+    person: { name: 'Reception', href: '#' },
+    description: {
+      item1: "Hors D'Oeuvres will be served along with wine and soft drinks until dinner.",
+      item2: 'Open bar during the evening.',
+      item3: 'Dancing and DJ service to conclude the evening.',
+    },
     time: '5:00 PM',
-    datetime: '2022-09-10',
     icon: HeartIcon,
     iconBackground: 'bg-red-400',
   },
   {
     id: 3,
-    content: 'Start of',
-    target: 'Dinner',
-    href: '#',
+    person: { name: 'Dinner', href: '#' },
+    description: {
+      details: 'Food choices',
+      item1: 'Salad',
+      item2: 'Pasta of your choosing (choice at point of serving)',
+      item3: 'Seasonal veggies',
+      item4: 'Apple blossom with vanilla ice cream for dessert',
+      item5: 'Fillet Mignon and Chicken Scaloppini or Vegetarian Stuffed Peppers',
+      item6: 'Late night sweet station',
+    },
     time: '6:30 PM',
-    datetime: '2022-09-10',
     icon: CakeIcon,
-    iconBackground: 'bg-pink-500',
+    iconBackground: 'bg-pink-400',
   },
 ];
 
@@ -43,7 +53,6 @@ export default function Event() {
       <div className="flex flex-col border-b border-gray-200 lg:border-0">
         <div className="relative">
           <div aria-hidden="true" className="hidden absolute w-1/2 h-full bg-gray-100 lg:block" />
-
           <div className="relative bg-gray-100 lg:bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-2">
               <div className="max-w-2xl mx-auto py-24 lg:py-64 lg:max-w-none">
@@ -63,39 +72,57 @@ export default function Event() {
                   <p className="mt-2 font-bold text-xl text-gray-600">ROOM D</p>
                   <div className="flow-root my-8">
                     <ul role="list" className="-mb-8">
-                      {timeline.map((event, eventIdx) => (
-                        <li key={event.id}>
+                      {activity.map((activityItem, activityItemIdx) => (
+                        <li key={activityItem.id}>
                           <div className="relative pb-8">
-                            {eventIdx !== timeline.length - 1 ? (
+                            {activityItemIdx !== activity.length - 1 ? (
                               <span
-                                className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
                                 aria-hidden="true"
                               />
                             ) : null}
-                            <div className="relative flex space-x-3">
-                              <div>
-                                <span
-                                  className={classNames(
-                                    event.iconBackground,
-                                    'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
-                                  )}
-                                >
-                                  <event.icon className="h-5 w-5 text-white" aria-hidden="true" />
-                                </span>
-                              </div>
-                              <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                            <div className="relative flex items-start space-x-3">
+                              <>
                                 <div>
-                                  <p className="text-sm text-gray-500">
-                                    {event.content}{' '}
-                                    <a href={event.href} className="font-medium text-gray-900">
-                                      {event.target}
-                                    </a>
-                                  </p>
+                                  <span
+                                    className={classNames(
+                                      activityItem.iconBackground,
+                                      'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
+                                    )}
+                                  >
+                                    <activityItem.icon
+                                      className="h-5 w-5 text-white"
+                                      aria-hidden="true"
+                                    />
+                                  </span>
                                 </div>
-                                <div className="text-right text-sm whitespace-nowrap text-gray-500">
-                                  <time dateTime={event.datetime}>{event.time}</time>
+                                <div className="min-w-0 flex-1">
+                                  <div>
+                                    <div className="text-sm">
+                                      <a
+                                        href={activityItem.person.href}
+                                        className="font-medium text-gray-900"
+                                      >
+                                        {activityItem.person.name}
+                                      </a>
+                                    </div>
+                                    <p className="mt-0.5 text-sm text-gray-500">
+                                      Starts at {activityItem.time}
+                                    </p>
+                                  </div>
+                                  <div className="mt-2 text-sm text-gray-700">
+                                    <p className="italic font-semibold">{activityItem.description.details}</p>
+                                    <ul role="list" className="list-disc ml-4">
+                                      {activityItem.description.item1 ? <li>{activityItem.description.item1}</li> : null}
+                                      {activityItem.description.item2 ? <li>{activityItem.description.item2}</li> : null}
+                                      {activityItem.description.item3 ? <li>{activityItem.description.item3}</li> : null}
+                                      {activityItem.description.item4 ? <li>{activityItem.description.item4}</li> : null}
+                                      {activityItem.description.item5 ? <li>{activityItem.description.item5}</li> : null}
+                                      {activityItem.description.item6 ? <li>{activityItem.description.item6}</li> : null}
+                                    </ul>
+                                  </div>
                                 </div>
-                              </div>
+                              </>
                             </div>
                           </div>
                         </li>

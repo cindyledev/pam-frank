@@ -15,9 +15,9 @@ export default function Home() {
           <div className="flex flex-col items-center text-center">
             <h2
               id="details-heading"
-              className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+              className="text-3xl font-polonaise tracking-tight text-gray-900 sm:text-4xl"
             >
-              PAM & FRANK
+              Pam and Frank
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-600">
               Please join us for our wedding celebration on

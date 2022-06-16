@@ -36,14 +36,12 @@ export default function Gallery({ initial_images, next_cursor }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-
       <div className="max-w-7xl mx-auto py-16 px-4 overflow-hidden sm:py-24 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          GALLERY
-        </h2>
-      </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            GALLERY
+          </h2>
+        </div>
         <div className="grid grid-cols-1 mt-16 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
           {initial_images.map((image) => (
             <a key={image.id} href={image.image} className="group text-sm">

@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        polonaise: ['POLONAISE', 'cursive']
+        polonaise: ['POLONAISE', 'cursive'],
       },
     },
   },

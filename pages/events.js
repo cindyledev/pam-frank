@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Head from 'next/head';
 import { CakeIcon, HeartIcon, BellIcon, UserCircleIcon } from '@heroicons/react/solid';
 
 const activity = [
@@ -50,6 +51,12 @@ function classNames(...classes) {
 export default function Event() {
   return (
     <div className="bg-white">
+      <Head>
+        <title>Events - Pam & Frank</title>
+        <meta name="description" content="Pam and Frank's Wedding" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <div className="flex flex-col border-b border-gray-200 lg:border-0">
         <div className="relative">
           <div aria-hidden="true" className="hidden absolute w-1/2 h-full bg-gray-100 lg:block" />

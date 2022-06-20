@@ -133,7 +133,6 @@ export default function Travel() {
             src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_API_KEY}&q=Venetian+Banquet+Concord+ON`}
           ></iframe>
         </div>
-
       </div>
     </div>
   );

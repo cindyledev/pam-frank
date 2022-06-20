@@ -1,11 +1,10 @@
-import { Fragment } from 'react';
 import Head from 'next/head';
-import { CakeIcon, HeartIcon, BellIcon, UserCircleIcon } from '@heroicons/react/solid';
+import { CakeIcon, HeartIcon, BellIcon } from '@heroicons/react/solid';
 
 const activity = [
   {
     id: 1,
-    person: { name: 'Wedding Ceremony', href: '#' },
+    event: { name: 'Wedding Ceremony', href: '#' },
     description: {
       details:
         'Approximately 30 minutes, followed immediately by reception in the lobby at the same venue.',
@@ -16,7 +15,7 @@ const activity = [
   },
   {
     id: 2,
-    person: { name: 'Reception', href: '#' },
+    event: { name: 'Reception', href: '#' },
     description: {
       item1: "Hors D'Oeuvres will be served along with wine and soft drinks until dinner.",
     },
@@ -26,7 +25,7 @@ const activity = [
   },
   {
     id: 3,
-    person: { name: 'Dinner', href: '#' },
+    event: { name: 'Dinner', href: '#' },
     description: {
       details: 'Food choices',
       item1: 'Salad',
@@ -42,7 +41,7 @@ const activity = [
   },
   {
     id: 4,
-    person: { name: 'After Dinner', href: '#' },
+    event: { name: 'After Dinner', href: '#' },
     description: {
       item1: 'Open bar during the evening.',
       item2: 'Dancing and DJ service to conclude the evening.',
@@ -116,10 +115,10 @@ export default function Event() {
                                   <div>
                                     <div className="text-sm">
                                       <a
-                                        href={activityItem.person.href}
+                                        href={activityItem.event.href}
                                         className="font-medium text-gray-900"
                                       >
-                                        {activityItem.person.name}
+                                        {activityItem.event.name}
                                       </a>
                                     </div>
                                     <p className="mt-0.5 text-sm text-gray-500">

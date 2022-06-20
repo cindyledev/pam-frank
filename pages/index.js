@@ -22,6 +22,9 @@ export default function Home() {
               Please join us for our wedding celebration on
             </p>
             <p className="mt-3 max-w-3xl text-lg text-gray-600">September 10, 2022</p>
+            <p className="mt-3 max-w-3xl text-lg text-gray-600">
+              If you have any questions, please email pamandfrankwedding@gmail.com
+            </p>
           </div>
 
           <div className="mt-16">

@@ -122,6 +122,18 @@ export default function Travel() {
             </div>
           ))}
         </div>
+
+        <div className="flex mt-16 justify-center rounded-lg">
+          <iframe
+            width="100%"
+            height="450"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_API_KEY}&q=Venetian+Banquet+Concord+ON`}
+          ></iframe>
+        </div>
+
       </div>
     </div>
   );

@@ -15,7 +15,12 @@ export default function Gift() {
             GIFT REGISTRY
           </h2>
           <div className="mt-16 space-y-16">
-            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">Money Preferred</p>
+            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+              The most important thing to us is to be able to share our special day with those we
+              love. We are extremely lucky to have had the last 33 years together full of love,
+              laughter, and happiness, however if you would like to help us celebrate with a gift,
+              cash would be most appreciated.
+            </p>
           </div>
         </div>
       </div>

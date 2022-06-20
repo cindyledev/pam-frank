@@ -1,20 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 
-import { getFolders, mapImageResources, search } from '../lib/cloudinary';
+import { mapImageResources, search } from '../lib/cloudinary';
 
-export default function Gallery({ images: defaultImages, nextCursor: defaultNextCursor, folders }) {
+export default function Gallery({ images: defaultImages, nextCursor: defaultNextCursor }) {
   const [images, setImages] = useState(defaultImages);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
   console.log('defaultImages', images);
-  console.log('nextCursor', nextCursor);
 
   async function handleLoadMore(event) {
     event.preventDefault();
 
     const results = await fetch('/api/search', {
       method: 'POST',
-      body: JSON.stringify({ nextCursor, expression: `folder="${process.env.CLOUDINARY_FOLDER}"` }),
+      body: JSON.stringify({ nextCursor }),
     }).then((res) => res.json());
 
     const { resources, next_cursor: updatedNextCursor } = results;
@@ -58,13 +57,19 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
           ))}
         </div>
         <div className="flex mt-4 mx-auto justify-center">
-          <button
-            onClick={handleLoadMore}
-            type="button"
-            className="inline-flex items-center mt-2 px-2.5 py-1.5 border border-transparent text-sm font-medium rounded shadow-sm text-white bg-red-800 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
-          >
-            LOAD MORE
-          </button>
+          {nextCursor == undefined ? (
+            <div className="inline-flex items-center mt-2 px-2.5 py-1.5 border border-transparent text-sm font-medium rounded shadow-sm text-white bg-red-800">
+              END
+            </div>
+          ) : (
+            <button
+              onClick={handleLoadMore}
+              type="button"
+              className="inline-flex items-center mt-2 px-2.5 py-1.5 border border-transparent text-sm font-medium rounded shadow-sm text-white bg-red-800 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
+            >
+              LOAD MORE
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -73,20 +78,17 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
 
 export async function getStaticProps() {
   const results = await search({
-    expression: 'folder=""',
+    max_results: 10,
   });
 
   const { resources, next_cursor: nextCursor } = results;
 
   const images = mapImageResources(resources);
 
-  const { folders } = await getFolders();
-
   return {
     props: {
       images,
       nextCursor: nextCursor || false,
-      folders,
     },
   };
 }

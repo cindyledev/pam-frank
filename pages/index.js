@@ -45,7 +45,7 @@ export default function Home() {
                   Our Story
                 </h2>
                 <div className="mt-8">
-                <OurStory />
+                  <OurStory />
                 </div>
               </div>
             </div>

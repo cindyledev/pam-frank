@@ -41,15 +41,15 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
             GALLERY
           </h2>
         </div>
-        <div className="grid grid-cols-1 mt-16 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
+        {/* <div className="grid grid-cols-1 mt-16 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
           {images.map((image) => (
             <a key={image.id} href={image.image} className="group text-sm">
               <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 group-hover:opacity-75">
-                {/* <img
+                <img
                   src={image.image}
                   alt={image.title}
                   className="w-full h-full object-center object-cover"
-                /> */}
+                />
               </div>
               <h3 className="mt-4 font-medium text-gray-900">{image.title}</h3>
               <p className="text-gray-500 italic">{image.id}</p>
@@ -70,25 +70,26 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
               LOAD MORE
             </button>
           )}
-        </div>
+        </div> */}
+
       </div>
     </div>
   );
 }
 
-export async function getStaticProps() {
-  const results = await search({
-    max_results: 10,
-  });
+// export async function getStaticProps() {
+//   const results = await search({
+//     max_results: 10,
+//   });
 
-  const { resources, next_cursor: nextCursor } = results;
+//   const { resources, next_cursor: nextCursor } = results;
 
-  const images = mapImageResources(resources);
+//   const images = mapImageResources(resources);
 
-  return {
-    props: {
-      images,
-      nextCursor: nextCursor || false,
-    },
-  };
-}
+//   return {
+//     props: {
+//       images,
+//       nextCursor: nextCursor || false,
+//     },
+//   };
+// }

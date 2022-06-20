@@ -39,9 +39,9 @@ const story = [
 export default function OurStory() {
   return (
     <div className="max-w-3xl">
-    {story.map((s, id) => (
-      <div key={s.id} className="flex">
-        <div className="mr-4 flex-shrink-0">
+      {story.map((s, id) => (
+        <div key={s.id} className="flex my-2">
+          {/* <div className="mr-4 flex-shrink-0">
           <svg
             className="h-16 w-16 border border-gray-300 bg-white text-gray-300"
             preserveAspectRatio="none"
@@ -52,16 +52,13 @@ export default function OurStory() {
           >
             <path vectorEffect="non-scaling-stroke" strokeWidth={1} d="M0 0l200 200M0 200L200 0" />
           </svg>
+        </div> */}
+          <div>
+            <h4 className="text-lg font-bold capitalize">{s.person}</h4>
+            <p className="mt-1">{s.text}</p>
+          </div>
         </div>
-        <div>
-          <h4 className="text-lg font-bold capitalize">{s.person}</h4>
-          <p className="mt-1">
-            {s.text}
-          </p>
-        </div>
-      </div>
-    ))}
-
+      ))}
     </div>
   );
 }

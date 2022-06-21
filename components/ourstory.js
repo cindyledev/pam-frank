@@ -41,21 +41,17 @@ export default function OurStory() {
     <div className="max-w-3xl">
       {story.map((s, id) => (
         <div key={s.id} className="flex my-2">
-          {/* <div className="mr-4 flex-shrink-0">
-          <svg
-            className="h-16 w-16 border border-gray-300 bg-white text-gray-300"
-            preserveAspectRatio="none"
-            stroke="currentColor"
-            fill="none"
-            viewBox="0 0 200 200"
-            aria-hidden="true"
-          >
-            <path vectorEffect="non-scaling-stroke" strokeWidth={1} d="M0 0l200 200M0 200L200 0" />
-          </svg>
-        </div> */}
           <div>
-            <h4 className="text-lg font-bold capitalize">{s.person}</h4>
-            <p className="mt-1">{s.text}</p>
+            <h4 className="text-lg font-semibold capitalize">{s.person}</h4>
+            {s.person == 'frank' ? (
+              <p className="mt-1 px-4 py-2 border border-transparent rounded-md text-blue-700 bg-blue-100">
+                {s.text}
+              </p>
+            ) : (
+              <p className="mt-1 px-4 py-2 border border-transparent rounded-md text-orange-700 bg-orange-100">
+                {s.text}
+              </p>
+            )}
           </div>
         </div>
       ))}

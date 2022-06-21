@@ -38,9 +38,7 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
 
       <div className="max-w-7xl mx-auto py-16 px-4 overflow-hidden sm:py-24 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            GALLERY
-          </h2>
+          <h2 className="text-6xl font-polonaise tracking-tight text-gray-900">Gallery</h2>
         </div>
         <div className="grid grid-cols-1 mt-16 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
           {images.map((image) => (
@@ -79,7 +77,7 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
 
 export async function getStaticProps() {
   const results = await search({
-    max_results: 10,
+    max_results: 12,
   });
 
   const { resources, next_cursor: nextCursor } = results;

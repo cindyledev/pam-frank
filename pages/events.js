@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { BellIcon, CakeIcon, HeartIcon, MusicNoteIcon } from '@heroicons/react/solid';
 
-const activity = [
+const event = [
   {
     id: 1,
-    event: { name: 'Wedding Ceremony', href: '#' },
+    name: 'Wedding Ceremony',
     description: {
       details:
         'Approximately 30 minutes, followed immediately by reception in the lobby at the same venue.',
@@ -16,7 +16,7 @@ const activity = [
   },
   {
     id: 2,
-    event: { name: 'Reception', href: '#' },
+    name: 'Reception',
     description: {
       details: "Hors D'Oeuvres will be served along with wine and soft drinks until dinner.",
     },
@@ -26,7 +26,7 @@ const activity = [
   },
   {
     id: 3,
-    event: { name: 'Dinner', href: '#' },
+    name: 'Dinner',
     description: {
       details: 'Food choices',
       item1: 'Salad',
@@ -42,7 +42,7 @@ const activity = [
   },
   {
     id: 4,
-    event: { name: 'After Dinner', href: '#' },
+    name: 'After Dinner',
     description: {
       item1: 'Open bar',
       item2: 'Dancing and DJ service',
@@ -74,9 +74,7 @@ export default function Event() {
               <div className="max-w-2xl mx-auto py-24 lg:py-64 lg:max-w-none">
                 <div className="lg:pr-16">
                   <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                      EVENTS
-                    </h2>
+                    <h2 className="text-6xl font-polonaise tracking-tight text-gray-900">Events</h2>
                   </div>
                   <p className="mt-4 text-xl text-gray-600">4:30 PM - September 10, 2022</p>
                   <p className="mt-2 text-xl text-gray-600">
@@ -88,10 +86,10 @@ export default function Event() {
                   <p className="mt-2 font-bold text-xl text-gray-600">ROOM D</p>
                   <div className="flow-root my-8">
                     <ul role="list" className="-mb-8">
-                      {activity.map((activityItem, activityItemIdx) => (
-                        <li key={activityItem.id}>
+                      {event.map((eventItem, eventItemIdx) => (
+                        <li key={eventItem.id}>
                           <div className="relative pb-8">
-                            {activityItemIdx !== activity.length - 1 ? (
+                            {eventItemIdx !== event.length - 1 ? (
                               <span
                                 className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
                                 aria-hidden="true"
@@ -102,11 +100,11 @@ export default function Event() {
                                 <div>
                                   <span
                                     className={classNames(
-                                      activityItem.iconBackground,
+                                      eventItem.iconBackground,
                                       'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white'
                                     )}
                                   >
-                                    <activityItem.icon
+                                    <eventItem.icon
                                       className="h-5 w-5 text-white"
                                       aria-hidden="true"
                                     />
@@ -116,38 +114,38 @@ export default function Event() {
                                   <div>
                                     <div className="text-sm">
                                       <a
-                                        href={activityItem.event.href}
+                                        href={eventItem.name}
                                         className="font-medium text-gray-900"
                                       >
-                                        {activityItem.event.name}
+                                        {eventItem.name}
                                       </a>
                                     </div>
                                     <p className="mt-0.5 text-sm text-gray-500">
-                                      Starts at {activityItem.time}
+                                      Starts at {eventItem.time}
                                     </p>
                                   </div>
                                   <div className="mt-2 text-sm text-gray-700">
                                     <p className="italic font-semibold">
-                                      {activityItem.description.details}
+                                      {eventItem.description.details}
                                     </p>
                                     <ul role="list" className="list-disc ml-4">
-                                      {activityItem.description.item1 ? (
-                                        <li>{activityItem.description.item1}</li>
+                                      {eventItem.description.item1 ? (
+                                        <li>{eventItem.description.item1}</li>
                                       ) : null}
-                                      {activityItem.description.item2 ? (
-                                        <li>{activityItem.description.item2}</li>
+                                      {eventItem.description.item2 ? (
+                                        <li>{eventItem.description.item2}</li>
                                       ) : null}
-                                      {activityItem.description.item3 ? (
-                                        <li>{activityItem.description.item3}</li>
+                                      {eventItem.description.item3 ? (
+                                        <li>{eventItem.description.item3}</li>
                                       ) : null}
-                                      {activityItem.description.item4 ? (
-                                        <li>{activityItem.description.item4}</li>
+                                      {eventItem.description.item4 ? (
+                                        <li>{eventItem.description.item4}</li>
                                       ) : null}
-                                      {activityItem.description.item5 ? (
-                                        <li>{activityItem.description.item5}</li>
+                                      {eventItem.description.item5 ? (
+                                        <li>{eventItem.description.item5}</li>
                                       ) : null}
-                                      {activityItem.description.item6 ? (
-                                        <li>{activityItem.description.item6}</li>
+                                      {eventItem.description.item6 ? (
+                                        <li>{eventItem.description.item6}</li>
                                       ) : null}
                                     </ul>
                                   </div>

@@ -67,9 +67,7 @@ export default function Travel() {
 
       <div className="max-w-2xl mx-auto py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            HOTELS NEARBY
-          </h2>
+          <h2 className="text-6xl font-polonaise tracking-tight text-gray-900">Hotels Nearby</h2>
         </div>
 
         <div className="mt-16 space-y-16">
@@ -88,7 +86,7 @@ export default function Travel() {
                 <p className="mt-2 text-sm text-gray-500">{hotel.address}</p>
                 <p className="mt-2 text-sm text-gray-500">{hotel.city}</p>
                 {hotel.id === 1 ? (
-                  <p className="my-4 text-sm items-center justify-center px-4 py-2 border border-transparent rounded-md text-green-700 bg-green-100 sm:text-sm">
+                  <p className="my-4 text-sm items-center justify-center px-4 py-2 border border-transparent rounded-md text-orange-700 bg-orange-100 sm:text-sm">
                     Call <span className="font-semibold">905-660-0212</span> or email{' '}
                     <span className="font-semibold">novotel.torontovaughan@accor.com</span> before{' '}
                     <span className="font-semibold">August 10th</span> and mention the{' '}

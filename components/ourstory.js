@@ -42,7 +42,7 @@ export default function OurStory() {
       {story.map((s, id) => (
         <div key={s.id} className="flex my-2">
           <div>
-            <h4 className="text-lg font-semibold capitalize">{s.person}</h4>
+            <h3 className="text-lg font-semibold capitalize">{s.person}</h3>
             {s.person == 'frank' ? (
               <p className="mt-1 px-4 py-2 border border-transparent rounded-md text-blue-700 bg-blue-100">
                 {s.text}

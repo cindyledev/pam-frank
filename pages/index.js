@@ -47,7 +47,6 @@ export default function Home() {
 
             <div className="mt-24 flex flex-col items-center">
               <h2
-                id="details-heading"
                 className="text-6xl font-polonaise tracking-tight text-center text-gray-900"
               >
                 Our Story

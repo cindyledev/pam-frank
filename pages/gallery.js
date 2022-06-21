@@ -82,7 +82,8 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
 
 export async function getStaticProps() {
   const results = await search({
-    max_results: 12,
+    expression: 'public_id=pam-frank/*',
+    max_results: 12
   });
 
   const { resources, next_cursor: nextCursor } = results;

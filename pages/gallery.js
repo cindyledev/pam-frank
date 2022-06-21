@@ -41,7 +41,13 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
         </div>
         <div className="grid grid-cols-1 mt-16 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
           {images.map((image) => (
-            <a key={image.id} href={image.image} target="_blank" rel="noreferrer" className="group text-sm">
+            <a
+              key={image.id}
+              href={image.image}
+              target="_blank"
+              rel="noreferrer"
+              className="group text-sm"
+            >
               <div className="w-full relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 group-hover:opacity-75">
                 <Image
                   src={image.image}

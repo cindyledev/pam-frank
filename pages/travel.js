@@ -126,12 +126,13 @@ export default function Travel() {
 
         <div className="flex mt-16 justify-center rounded-lg">
           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5757.723111928017!2d-79.529861!3d43.817231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdd4dd9d7b4f1259!2sThe%20Venetian!5e0!3m2!1sen!2sus!4v1655851368004!5m2!1sen!2sus"
             width="100%"
             height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
             loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_API_KEY}&q=Venetian+Banquet+Concord+ON`}
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

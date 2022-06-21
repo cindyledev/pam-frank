@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { CakeIcon, HeartIcon, BellIcon } from '@heroicons/react/solid';
+import Image from 'next/image';
+import { BellIcon, CakeIcon, HeartIcon, MusicNoteIcon } from '@heroicons/react/solid';
 
 const activity = [
   {
@@ -17,7 +18,7 @@ const activity = [
     id: 2,
     event: { name: 'Reception', href: '#' },
     description: {
-      item1: "Hors D'Oeuvres will be served along with wine and soft drinks until dinner.",
+      details: "Hors D'Oeuvres will be served along with wine and soft drinks until dinner.",
     },
     time: '5:00 PM',
     icon: HeartIcon,
@@ -43,12 +44,12 @@ const activity = [
     id: 4,
     event: { name: 'After Dinner', href: '#' },
     description: {
-      item1: 'Open bar during the evening.',
-      item2: 'Dancing and DJ service to conclude the evening.',
+      item1: 'Open bar',
+      item2: 'Dancing and DJ service',
     },
     time: '9:00 PM',
-    icon: CakeIcon,
-    iconBackground: 'bg-pink-400',
+    icon: MusicNoteIcon,
+    iconBackground: 'bg-orange-400',
   },
 ];
 
@@ -162,15 +163,19 @@ export default function Event() {
               </div>
             </div>
           </div>
-          <div className="w-full h-48 sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full">
-            <img
-              src="img/ImageID_51573693_1.jpg"
-              alt=""
+          <div className="w-full h-48 relative sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full">
+            <Image
+              src="https://res.cloudinary.com/diwuya9d9/image/upload/v1654876331/pam-frank/ImageID_51573693_1_tinsrm.jpg"
+              alt="ImageID_51573693_1"
+              layout="fill"
+              objectFit="cover"
               className="hidden lg:block w-full h-full object-center object-cover"
             />
-            <img
-              src="img/ImageID_51573693_1_crop.jpg"
-              alt=""
+            <Image
+              src="https://res.cloudinary.com/diwuya9d9/image/upload/v1654876339/pam-frank/ImageID_51573693_1_crop_xvcywf.jpg"
+              alt="ImageID_51573693_crop"
+              layout="fill"
+              objectFit="cover"
               className="block lg:hidden w-full h-full object-top object-cover"
             />
           </div>

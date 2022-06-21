@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import { mapImageResources, search } from '../lib/cloudinary';
 
@@ -44,15 +45,15 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
         <div className="grid grid-cols-1 mt-16 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
           {images.map((image) => (
             <a key={image.id} href={image.image} className="group text-sm">
-              <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 group-hover:opacity-75">
-                <img
+              <div className="w-full relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 group-hover:opacity-75">
+                <Image
                   src={image.image}
                   alt={image.title}
+                  layout="fill"
+                  objectFit="cover"
                   className="w-full h-full object-center object-cover"
                 />
               </div>
-              <h3 className="mt-4 font-medium text-gray-900">{image.title}</h3>
-              <p className="text-gray-500 italic">{image.id}</p>
             </a>
           ))}
         </div>
@@ -71,7 +72,6 @@ export default function Gallery({ images: defaultImages, nextCursor: defaultNext
             </button>
           )}
         </div>
-
       </div>
     </div>
   );

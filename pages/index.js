@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 import OurStory from '../components/ourstory';
 
@@ -32,32 +33,40 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-16">
-            <div className="aspect-w-5 aspect-h-2 rounded-lg bg-gray-100 overflow-hidden">
-              <img src="img/ImageID_51573688_1.jpg" alt="" className="object-top object-cover" />
+          <div className="mt-16 grid grid-cols-1 items-center">
+            <div className="relative h-full w-full aspect-w-5 aspect-h-2 rounded-lg bg-gray-100 overflow-hidden">
+              <Image
+                src="https://res.cloudinary.com/diwuya9d9/image/upload/v1654876331/pam-frank/ImageID_51573688_1_jnuqnp.jpg"
+                alt="ImageID_51573688_1"
+                layout="fill"
+                objectFit="cover"
+                priority="true"
+                className="object-top object-cover"
+              />
             </div>
-            <div>
-              <div className="mt-24 flex flex-col items-center">
-                <h2
-                  id="details-heading"
-                  className="text-6xl font-polonaise tracking-tight text-center text-gray-900"
-                >
-                  Our Story
-                </h2>
-                <div className="mt-8">
-                  <OurStory />
-                </div>
+
+            <div className="mt-24 flex flex-col items-center">
+              <h2
+                id="details-heading"
+                className="text-6xl font-polonaise tracking-tight text-center text-gray-900"
+              >
+                Our Story
+              </h2>
+              <div className="mt-8">
+                <OurStory />
               </div>
             </div>
+
             <div className="flex flex-col mt-16 items-center">
               <div className="max-w-xl rounded-lg overflow-hidden">
                 <img
-                  src="img/weddinginvite.png"
-                  alt="Drawstring top with elastic loop closure and textured interior padding."
+                  src="https://res.cloudinary.com/diwuya9d9/image/upload/v1655828915/pam-frank/weddinginvite_hlxyso.png"
+                  alt="Wedding Invitation."
                   className="w-full h-full"
                 />
               </div>
             </div>
+
           </div>
         </section>
       </div>

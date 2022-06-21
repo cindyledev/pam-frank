@@ -27,7 +27,10 @@ export default function Home() {
             <p className="mt-3 max-w-3xl text-lg text-gray-600">September 10, 2022</p>
             <p className="mt-3 max-w-3xl text-lg text-gray-600">
               If you have any questions, please email{' '}
-              <a className="hover:text-red-900" href="mailto:pamandfrankwedding@gmail.com">
+              <a
+                className="text-red-900 hover:text-red-800"
+                href="mailto:pamandfrankwedding@gmail.com"
+              >
                 pamandfrankwedding@gmail.com
               </a>
             </p>
@@ -46,9 +49,7 @@ export default function Home() {
             </div>
 
             <div className="mt-24 flex flex-col items-center">
-              <h2
-                className="text-6xl font-polonaise tracking-tight text-center text-gray-900"
-              >
+              <h2 className="text-6xl font-polonaise tracking-tight text-center text-gray-900">
                 Our Story
               </h2>
               <div className="mt-8">

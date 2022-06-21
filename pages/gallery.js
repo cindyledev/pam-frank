@@ -3,11 +3,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import { mapImageResources, search } from '../lib/cloudinary';
+import Modal from '../components/modal';
 
 export default function Gallery({ images: defaultImages, nextCursor: defaultNextCursor }) {
   const [images, setImages] = useState(defaultImages);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
-  console.log('defaultImages', images);
 
   async function handleLoadMore(event) {
     event.preventDefault();

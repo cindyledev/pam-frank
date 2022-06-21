@@ -34,7 +34,6 @@ const event = [
       item3: 'Seasonal veggies',
       item4: 'Fillet Mignon and Chicken Scaloppini or Vegetarian Stuffed Peppers',
       item5: 'Apple blossom with vanilla ice cream for dessert',
-      item6: 'Late night sweet station',
     },
     time: '6:30 PM',
     icon: CakeIcon,
@@ -46,6 +45,7 @@ const event = [
     description: {
       item1: 'Open bar',
       item2: 'Dancing and DJ service',
+      item3: 'Late night sweet station',
     },
     time: '9:00 PM',
     icon: MusicNoteIcon,

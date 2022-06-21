@@ -86,7 +86,7 @@ export default function Travel() {
                 <p className="mt-2 text-sm text-gray-500">{hotel.address}</p>
                 <p className="mt-2 text-sm text-gray-500">{hotel.city}</p>
                 {hotel.id === 1 ? (
-                  <p className="my-4 text-sm items-center justify-center px-4 py-2 border border-transparent rounded-md text-orange-700 bg-orange-100 sm:text-sm">
+                  <p className="mt-2 text-sm items-center justify-center px-4 py-2 border border-transparent rounded-md text-orange-700 bg-orange-100 sm:text-sm">
                     Call <span className="font-semibold">905-660-0212</span> or email{' '}
                     <span className="font-semibold">novotel.torontovaughan@accor.com</span> before{' '}
                     <span className="font-semibold">August 10th</span> and mention the{' '}
@@ -98,7 +98,7 @@ export default function Travel() {
                 <a href={hotel.url} target="_blank" rel="noreferrer">
                   <button
                     type="button"
-                    className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-red-800 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
+                    className="inline-flex items-center mt-2 px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-red-800 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
                   >
                     LINK
                   </button>

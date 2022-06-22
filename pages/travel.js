@@ -70,6 +70,18 @@ export default function Travel() {
           <h2 className="text-6xl font-polonaise tracking-tight text-gray-900">Hotels Nearby</h2>
         </div>
 
+        <div className="flex mt-16 justify-center rounded-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5757.723111928017!2d-79.529861!3d43.817231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdd4dd9d7b4f1259!2sThe%20Venetian!5e0!3m2!1sen!2sus!4v1655851368004!5m2!1sen!2sus"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
         <div className="mt-16 space-y-16">
           {hotels.map((hotel, hotelIdx) => (
             <div
@@ -122,18 +134,6 @@ export default function Travel() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="flex mt-16 justify-center rounded-lg">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5757.723111928017!2d-79.529861!3d43.817231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdd4dd9d7b4f1259!2sThe%20Venetian!5e0!3m2!1sen!2sus!4v1655851368004!5m2!1sen!2sus"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
         </div>
       </div>
     </div>

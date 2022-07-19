@@ -8,5 +8,6 @@ module.exports = {
       'www.hilton.com',
     ],
   },
+  output: 'standalone',
   reactStrictMode: true,
 };
